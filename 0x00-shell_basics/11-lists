@@ -1,14 +1,2 @@
 #!/bin/bash
-#!/bin/bash
-
-# List files in current directory in long format
-ls -la
-
-# Change to the parent directory and list files in long format
-cd ..
-ls -la
-
-# Change to the /boot directory and list files in long format
-cd /boot
-ls -la
-
+{ ls -la; cd .. && ls -la; cd /boot && ls -la; }
