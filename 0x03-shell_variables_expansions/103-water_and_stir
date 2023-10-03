@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=5;obase=7;$(tr -d . <<< $WATER)+$(tr -d . <<< $STIR)" | bc | tr -d 0123456
+printf "%o\n" $(( $((5#(echo $WATER | tr water 01234))) + $((5#(echo $STIR | tr stir. 01234))) )) | tr '01234567' 'bestchol'
